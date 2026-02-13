@@ -1,4 +1,8 @@
 /* NOT: Bu CSS sadece temel yerleşimi sağlar. Göreviniz: Renkler, fontlar, gölgeler ve buton tasarımları ekleyerek bu uygulamayı modern ve şık hale getirmektir. */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #ebf6f5;
@@ -131,4 +135,83 @@ p {
   font-size: 40px;
   margin: 10px 0;
   color: #5cbdb9;
+}
+
+/* Tablet */
+@media (max-width: 1142px) {
+
+  .app-container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 9px 20px;
+    font-size: 13px;
+  }
+
+  .option-btn {
+    font-size: 13px;
+    padding: 12px 15px;
+  }
+}
+
+
+/* responsive */
+@media (max-width: 970px) {
+
+  body {
+    align-items: flex-start;
+  }
+
+  .app-container {
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 25px 15px;
+  }
+
+  .screen {
+    padding: 40px 10px;
+  }
+
+  .screen.active {
+    border-radius: 0; 
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .header {
+    font-size: 13px;
+  }
+
+  #options-container {
+    gap: 10px;
+  }
+
+  .option-btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  #final-score {
+    font-size: 32px;
+  }
 }
