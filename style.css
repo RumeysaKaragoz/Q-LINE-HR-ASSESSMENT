@@ -1,0 +1,134 @@
+/* NOT: Bu CSS sadece temel yerleşimi sağlar. Göreviniz: Renkler, fontlar, gölgeler ve buton tasarımları ekleyerek bu uygulamayı modern ve şık hale getirmektir. */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ebf6f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+.app-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(92, 189, 185, 0.15);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.screen {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 60px 20px;
+  transition:
+    transform 0.6s cubic-bezier(0.1, 1.03, 1, -0.78),
+    opacity 0.4s ease;
+  transform: translateY(40px) scale(0.95);
+  opacity: 0;
+  border-radius: 0; 
+}
+/* Aktif ekran */
+.screen.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  height: 100vh;
+  width: 100%;
+  background: #ebf6f5;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0% 100% 100% 0% / 100% 0% 100% 0%;
+  transition: all 0.5s cubic-bezier(.1,1.03,1,-0.78);
+}
+
+.screen.screen.active:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #5cbdb9;
+
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #444;
+}
+p {
+   font-size: 15px;
+  color: #666;
+
+}
+.header {
+ display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+  font-size: 14px;
+  border-bottom: 2px solid #ebf6f5;
+  padding-bottom: 8px;
+  color: #5cbdb9;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+ /* Butonlar çok çirkin, lütfen düzeltin! */
+.btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #5cbdb9;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.btn:hover {
+  background-color: #4aa9a5;
+  transform: translateY(-4px);
+}
+
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+} /* Şıklar için stil (JS ile oluşturulacak butonlar) */
+.option-btn {
+  font-size: 14px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #fbe3e8;
+  background-color: #fbe3e8;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.option-btn:hover {
+  background-color: #5cbdb9;
+  border-color: #5cbdb9;
+  transform: translateX(5px);
+  box-shadow: 0 10px 25px rgba(111, 124, 255, 0.4);
+}
+
+#final-score {
+  font-size: 40px;
+  margin: 10px 0;
+  color: #5cbdb9;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q-Line Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div id="start-screen" class="screen active">
+        <h1>Yazılım Bilgini Test Et!</h1>
+        <p>Toplam 4 soru. Bakalım kaç puan alacaksın?</p>
+        <button id="start-btn" class="btn">Teste Başla</button>
+      </div>
+      <div id="quiz-screen" class="screen hidden">
+        <div class="header">
+          <span id="question-number">Soru 1/4</span>
+          <span id="score-board">Puan: 0</span>
+        </div>
+        <h2 id="question-text">Soru metni buraya gelecek...</h2>
+        <div id="options-container"></div>
+      </div>
+      <div id="result-screen" class="screen hidden">
+        <h2>Test Bitti!</h2>
+        <p>Toplam Puanınız:</p>
+        <h1 id="final-score">0</h1>
+        <button onclick="location.reload()" class="btn">Tekrar Dene</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
