@@ -117,7 +117,7 @@ p {
   border-radius: 8px;
   border: 1px solid #fbe3e8;
   background-color: #fbe3e8;
-  color: white;
+  color: #333; 
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease;
